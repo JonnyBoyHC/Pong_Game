@@ -32,6 +32,14 @@ def init():
   global paddle_1_pos, paddle_2_pos, paddle_1_vel, paddle_2_vel, left_score, right_score
   global score_1, score_2
   paddle_1_pos = [half_pad_width - 1, height // 2]
+  paddle_2_pos = [width + 1 - half_pad_width, height // 2]
+  left_score = 0
+  right_score = 0
+
+  if random.randrange(0, 2) == 0:
+    ball_init(True)
+  else:
+    ball_init(False)
 
 
 init()
